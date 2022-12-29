@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html{
+  box-sizing: inherit;
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: black;
+}
+
+main{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tablero {
+  width: 345px;
+  height: 345px;
+  max-width: 390px;
+  max-height: 390px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.elemento{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  background-color: coral;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 3px 3px rgb(206, 199, 199);
+}
+
+.vacio {
+  border: 1px solid coral;
+  border-radius: 4px;
+  box-shadow: 3px 3px rgb(206, 199, 199);
+  background-color: rgb(27, 26, 26);
+}
