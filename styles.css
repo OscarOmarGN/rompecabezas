@@ -50,3 +50,28 @@ main{
   box-shadow: 3px 3px rgb(206, 199, 199);
   background-color: rgb(27, 26, 26);
 }
+
+.iniciar{
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.img-iniciar{
+  width: 345px;
+}
+
+.jugar-btn{
+  width: 100px;
+  height: 30px;
+  font-size: 1.3rem;
+  border: none;
+  background-color: rgb(211, 129, 70);
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.ocultar{
+  display: none;
+}
+
