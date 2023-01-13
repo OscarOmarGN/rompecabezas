@@ -1,4 +1,6 @@
 const $tablero = document.querySelector('.tablero');
+const $botonInicio = document.querySelector('.jugar-btn');
+const $inicio = document.querySelector('.iniciar');
 
 const desordenar = () => {
   let matrizMezclada = [
@@ -26,7 +28,16 @@ const desordenar = () => {
 
 }
 
-const matriz = desordenar();
+let matriz = desordenar();
+
+$botonInicio.addEventListener('click', () => {
+  $inicio.style.display = 'none';
+  $botonInicio.style.display = 'none';
+  $tablero.classList.remove('ocultar')
+  matriz = desordenar();
+  dibujarFichas();
+  agregarEscuchas();
+})
 
 const dibujarFichas = () => {
   $tablero.innerHTML = '';
@@ -118,6 +129,13 @@ const agregarEscuchas = () => {
       actualizarMatriz(e.innerText, posicionActual, posicionVacia);
       let resultado = compararMatriz()
       if(resultado){
+        
+        $botonInicio.style.display = 'block';
+        $botonInicio.innerText = 'Jugar de nuevo';
+        $botonInicio.style.margin = '2rem';
+        $botonInicio.style.width = '170px';
+        $botonInicio.style.height = '3rem';
+        
         confetti({
           particleCount: 150,
           spread: 180
